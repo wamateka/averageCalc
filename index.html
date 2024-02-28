@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AvCalc</title>
+    <script src="index.js"></script>
+
+    
+    <style>
+      body {
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(10, 178, 245),
+          yellow
+        );
+        background-repeat: repeat;
+        background-size: contain;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      #container {
+        border-radius: 10px;
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid grey;
+        text-align: center;
+        background-color: whitesmoke;
+        margin-top: 20%;
+        margin-bottom: 50%;
+        padding: 10px;
+        font-size: larger;
+        box-shadow: 10px 10px 30px;
+      }
+      h1 {
+        font-size: 150px;
+        text-align: center;
+      }
+      input {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      #marks {
+        background-color: rgb(7, 110, 144);
+      }
+      #average{
+        color: aliceblue;
+        background-color: black; 
+        padding: 4px;
+        border-radius: 3px;
+        
+      }</style>
+  </head>
+  <body>
+    <h1>Average Calculator</h1>
+    <div id="container">
+      <form>
+        <label for="score">ENTER marks</label>
+        <input type="text" id="score" />
+      </form>
+
+      <button onclick="addScore()">+</button>
+      <button onclick="removeScore()">-</button>
+
+      <div>
+        <p>
+          Entered marks:<br/>
+          <span id="scores"></span>
+          
+          
+        </p>
+      </div>
+
+      <button onclick="getAverage()">Average</button>
+
+      <div>
+        <p>Average</p>
+        <span id="average"></span>
+      </div>
+    </div>
+  </body>
+</html>
